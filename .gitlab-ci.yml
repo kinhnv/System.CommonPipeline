@@ -1,0 +1,8 @@
+stages:
+  - publish-code
+
+publish-code-job:
+  stage: publish-code
+  script:
+    - echo "Compiling the code..."
+    - echo "Compile complete."

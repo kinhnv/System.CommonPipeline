@@ -1,8 +1,14 @@
+include 'prepare-ssh.yml'
+
 stages:
   - publish-code
 
 publish-code-job:
   stage: publish-code
+  extends:
+    - .prepare_ssh
+  only:
+    - main
   script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+    - git remote set-url origin $GITHUB_URL 
+    - git push origin HEAD:main

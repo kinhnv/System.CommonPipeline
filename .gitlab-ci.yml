@@ -5,6 +5,8 @@ stages:
 
 publish-code-job:
   stage: publish-code
+  tags:
+    - "shell"
   extends:
     - .prepare_ssh
   only:

@@ -1,4 +1,4 @@
-include '.prepare-ssh.yml'
+include: '.prepare-ssh.yml'
 
 stages:
   - publish-code

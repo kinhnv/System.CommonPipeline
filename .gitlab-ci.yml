@@ -13,4 +13,4 @@ publish-code-job:
     - main
   script:
     - git remote set-url origin $GITHUB_URL 
-    - git push origin HEAD:main
+    - git push --set-upstream origin HEAD:main
